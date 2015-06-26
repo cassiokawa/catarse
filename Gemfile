@@ -18,7 +18,7 @@ gem "best_in_place", :git => "git://github.com/bernat/best_in_place", ref: "ee95
 gem 'state_machine', require: 'state_machine/core'
 
 # Database and data related
-gem 'pg', '0.17.1'
+
 gem 'dbhero', '~> 1.1.1'
 gem 'postgres-copy'
 gem 'pg_search'
@@ -115,6 +115,7 @@ group :production do
 
   # Make heroku serve static assets and loggin with stdout
   #gem 'rails_on_heroku'
+  gem 'pg', '0.17.1'
   gem 'rails_12factor'
 
   # Monitoring with the new new relic
@@ -132,6 +133,7 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'thin'
+
   # Uncomment only for optimization, should be commented on master branch
   # gem 'rack-mini-profiler'
   # gem 'ruby-prof'
@@ -144,6 +146,7 @@ group :test, :development do
   gem 'rspec-collection_matchers'
   gem 'pry'
   gem 'jasmine-rails'
+  gem 'sqlite3'
 end
 
 group :test do
